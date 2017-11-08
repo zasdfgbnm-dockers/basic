@@ -1,7 +1,7 @@
 FROM zasdfgbnm/archlinux-yaourt
 
 # setup
-COPY yaourt /
+COPY yaourt zshrc /
 
 # install packages
 USER user

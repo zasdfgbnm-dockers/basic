@@ -31,3 +31,25 @@ htop
 # compression
 zip
 pigz
+
+# scripting
+jupyter
+jupyter-notebook
+jupyter-nbconvert
+nodejs
+npm
+
+# python libs
+python-pandas
+python-progressbar
+python-sympy
+python-pip
+python-matplotlib
+python-numpy
+python-scipy
+
+# linter & beautifier
+autopep8
+uncrustify
+python-pylint
+js-beautify

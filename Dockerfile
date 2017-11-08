@@ -1,4 +1,4 @@
-FROM zasdfgbnmsystem/devenv-all-latest
+FROM zasdfgbnm/archlinux-yaourt
 
 # setup
 COPY yaourt /

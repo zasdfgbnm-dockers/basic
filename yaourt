@@ -18,6 +18,7 @@ dos2unix
 cloc
 vim
 git
+ctags
 
 # network related
 aria2

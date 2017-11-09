@@ -2,6 +2,7 @@ FROM zasdfgbnm/archlinux-yaourt
 
 # setup
 COPY yaourt zshrc /
+RUN /select-mirrors.sh
 
 # install packages
 USER user

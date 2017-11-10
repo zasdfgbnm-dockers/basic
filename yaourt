@@ -37,6 +37,7 @@ pigz
 jupyter
 jupyter-notebook
 jupyter-nbconvert
+mathjax
 nodejs
 npm
 

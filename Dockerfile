@@ -1,7 +1,8 @@
 FROM zasdfgbnm/archlinux-yaourt
 
 # setup
-COPY yaourt zshrc /
+COPY yaourt /
+COPY zshrc /etc/zsh/
 USER root
 RUN /select-mirrors.sh
 

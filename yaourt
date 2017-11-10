@@ -55,3 +55,7 @@ autopep8
 uncrustify
 python-pylint
 js-beautify
+
+# run docker inside docker
+docker
+nvidia-docker

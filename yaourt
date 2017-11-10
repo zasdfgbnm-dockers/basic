@@ -12,13 +12,13 @@ mosh
 screenfetch
 tree
 bc
-datastat-git
 pv
 dos2unix
 cloc
 vim
 git
 ctags
+ruby-travis
 
 # network related
 aria2

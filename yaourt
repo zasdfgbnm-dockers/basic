@@ -19,6 +19,9 @@ vim
 git
 ctags
 ruby-travis
+man-pages
+man-db
+linux-manpages
 
 # network related
 aria2

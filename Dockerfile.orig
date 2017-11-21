@@ -8,4 +8,12 @@ RUN /select-mirrors.sh
 
 # install packages
 USER user
+<<<<<<< HEAD
 RUN yaourt -Syua --noconfirm $(grep '^\w.*' /yaourt)
+
+# cleanups
+USER root
+RUN yes | pacman -Scc
+=======
+RUN yaourt -S --noconfirm $(grep '^\w.*' /yaourt)
+>>>>>>> 152356485ea32e7d56544c535aba0acc89b8ea5b

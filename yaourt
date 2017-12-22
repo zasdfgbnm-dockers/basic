@@ -46,6 +46,7 @@ jupyter-nbconvert
 mathjax
 nodejs
 npm
+jq
 
 # python libs
 python-pandas

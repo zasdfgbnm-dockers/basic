@@ -8,4 +8,4 @@ RUN /select-mirrors.sh
 
 # install packages
 USER user
-RUN yaourt -Syu --noconfirm $(grep '^\w.*' /yaourt)
+RUN yaourt -Syua --noconfirm && yaourt -S --noconfirm $(grep '^\w.*' /yaourt)

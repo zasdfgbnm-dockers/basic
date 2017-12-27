@@ -48,6 +48,7 @@ mathjax
 nodejs
 npm
 go
+go-tools
 
 # python libs
 python-pandas

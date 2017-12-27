@@ -10,6 +10,7 @@ screen
 mosh
 
 # useful command line tools
+jq
 screenfetch
 tree
 bc
@@ -38,7 +39,7 @@ htop
 zip
 pigz
 
-# scripting
+# programming
 clang
 jupyter
 jupyter-notebook
@@ -46,7 +47,7 @@ jupyter-nbconvert
 mathjax
 nodejs
 npm
-jq
+go
 
 # python libs
 python-pandas

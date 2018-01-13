@@ -1,0 +1,67 @@
+# shell
+zsh
+fish
+zsh-syntax-highlighting
+reptyr
+tmux
+screen
+mosh
+openssh
+
+# useful command line tools
+jq
+screenfetch
+tree
+bc
+pv
+dos2unix
+cloc
+vim
+git
+ctags
+man-pages
+man-db
+linux-manpages
+
+# network related
+aria2
+wget
+darkhttpd
+
+# system
+lsof
+iotop
+htop
+intel-ucode
+
+# compression
+zip
+pigz
+
+# programming
+clang
+jupyter
+jupyter-notebook
+jupyter-nbconvert
+mathjax
+nodejs
+npm
+go
+go-tools
+
+# python libs
+python-pandas
+python-progressbar
+python-sympy
+python-pip
+python-matplotlib
+python-numpy
+python-scipy
+
+# linter & beautifier
+autopep8
+uncrustify
+python-pylint
+
+# run docker inside docker
+docker

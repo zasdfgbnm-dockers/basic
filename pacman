@@ -32,7 +32,6 @@ darkhttpd
 lsof
 iotop
 htop
-intel-ucode
 
 # compression
 zip

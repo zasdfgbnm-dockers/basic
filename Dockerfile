@@ -1,10 +1,11 @@
 FROM zasdfgbnm/archlinux-yaourt
 
 # setup
+USER root
 COPY yaourt pacman /
 COPY zshrc /etc/zsh/
+COPY locale.gen /etc/locale.gen
 
-USER root
 # RUN /select-mirrors.sh
 RUN pacman -Syu --noconfirm base
 RUN locale-gen

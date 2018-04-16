@@ -18,6 +18,7 @@ dos2unix
 cloc
 vim
 git
+git-lfs
 ctags
 man-pages
 man-db

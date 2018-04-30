@@ -7,7 +7,9 @@ COPY zshrc /etc/zsh/
 COPY locale.gen /etc/locale.gen
 
 # RUN /select-mirrors.sh
-RUN pacman -Syu --noconfirm base
+RUN pacman -Syu --noconfirm
+RUN pacman -S --noconfirm man-db man-pages
+RUN pacman -S --noconfirm base
 RUN locale-gen
 RUN pacman -S --noconfirm $(grep '^\w.*' /pacman)
 

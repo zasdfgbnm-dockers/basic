@@ -20,9 +20,6 @@ vim
 git
 git-lfs
 ctags
-man-pages
-man-db
-linux-manpages
 
 # network related
 aria2

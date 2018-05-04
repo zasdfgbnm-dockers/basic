@@ -55,6 +55,7 @@ python-matplotlib
 python-numpy
 python-scipy
 python-h5py
+python-sphinx
 
 # linter & beautifier
 autopep8

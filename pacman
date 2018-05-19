@@ -20,6 +20,7 @@ vim
 git
 git-lfs
 ctags
+unzip
 
 # network related
 aria2

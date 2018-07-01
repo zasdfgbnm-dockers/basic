@@ -46,6 +46,7 @@ nodejs
 npm
 go
 go-tools
+scala
 
 # python libs
 python-pandas

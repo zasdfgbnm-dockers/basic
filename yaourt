@@ -2,6 +2,6 @@ mkinitcpio-docker-hooks
 oh-my-zsh-git
 byobu
 js-beautify
-nvidia-docker2
+nvidia-docker
 ruby-travis
 jdk

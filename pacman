@@ -67,6 +67,7 @@ tensorboard
 autopep8
 uncrustify
 python-pylint
+flake8
 
 # run docker inside docker
 docker

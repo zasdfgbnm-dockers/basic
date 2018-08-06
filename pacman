@@ -30,6 +30,7 @@ wireguard-dkms
 wireguard-tools
 
 # system
+linux-headers
 lsof
 iotop
 htop

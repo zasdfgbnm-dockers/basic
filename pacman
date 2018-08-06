@@ -26,6 +26,8 @@ unzip
 aria2
 wget
 darkhttpd
+wireguard-dkms
+wireguard-tools
 
 # system
 lsof

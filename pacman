@@ -49,6 +49,7 @@ npm
 go
 go-tools
 scala
+ninja
 
 # python libs
 python-pandas

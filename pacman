@@ -30,6 +30,7 @@ wireguard-dkms
 wireguard-tools
 
 # system
+nvidia-dkms
 linux-headers
 lsof
 iotop

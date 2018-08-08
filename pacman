@@ -28,6 +28,7 @@ wget
 darkhttpd
 wireguard-dkms
 wireguard-tools
+ethtool
 
 # system
 nvidia-dkms

@@ -7,6 +7,7 @@ tmux
 screen
 mosh
 openssh
+xonsh
 
 # useful command line tools
 jq

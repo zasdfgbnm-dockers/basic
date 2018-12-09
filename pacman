@@ -59,6 +59,7 @@ scala
 ninja
 
 # python libs
+scrapy
 python-pandas
 python-progressbar
 python-sympy

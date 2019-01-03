@@ -7,6 +7,7 @@ COPY zshrc /etc/zsh/
 COPY locale.gen /etc/locale.gen
 
 # RUN /select-mirrors.sh
+RUN pacman -Sy --noconfirm archlinux-keyring
 RUN pacman -Syu --noconfirm
 RUN pacman -S --noconfirm man-db man-pages
 RUN pacman -S --noconfirm base

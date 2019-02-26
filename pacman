@@ -28,6 +28,7 @@ unzip
 # network related
 aria2
 wget
+httpie
 darkhttpd
 wireguard-dkms
 wireguard-tools

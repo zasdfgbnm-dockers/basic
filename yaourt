@@ -6,4 +6,5 @@ nvidia-docker
 ruby-travis
 jdk
 slurm-llnl
+jupyter_contrib_nbextensions
 

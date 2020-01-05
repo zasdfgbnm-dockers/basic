@@ -23,6 +23,7 @@ RUN pacman -S --noconfirm base base-devel linux
 
 # install packages
 RUN pacman -S --noconfirm $(grep '^\w.*' /pacman)
+RUN pip install xonsh-docker-tabcomplete xonsh-vox-tabcomplete
 USER user
 
 # make initramfs bootable

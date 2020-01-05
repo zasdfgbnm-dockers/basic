@@ -45,6 +45,7 @@ iotop
 htop
 netdata
 docker
+efibootmgr
 
 # compression
 zip

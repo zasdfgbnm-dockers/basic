@@ -19,7 +19,7 @@ RUN pacman -Sy --noconfirm archlinux-keyring
 RUN pacman -S --noconfirm pacman pacman-contrib
 RUN pacman -S --noconfirm man-db man-pages
 RUN pacman -Qqn | pacman -S --noconfirm  -
-RUN pacman -S --noconfirm base base-devel linux
+RUN pacman -S --noconfirm base base-devel linux linux-firmware
 
 # install packages
 RUN pacman -S --noconfirm $(grep '^\w.*' /pacman)

@@ -44,6 +44,7 @@ lsof
 iotop
 htop
 netdata
+docker
 
 # compression
 zip
@@ -57,6 +58,3 @@ npm
 go
 go-tools
 ninja
-
-# run docker inside docker
-docker

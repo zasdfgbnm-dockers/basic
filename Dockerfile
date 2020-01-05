@@ -31,7 +31,7 @@ RUN sudo sed -i 's/archlinux\/base/zasdfgbnmsystem\/basic/g' /etc/docker-btrfs.j
 RUN sudo perl -i -p -e 's/(?<=^HOOKS=\()(.*)(?=\))/$1 docker-btrfs/g' /etc/mkinitcpio.conf
 
 # setting up services
-RUN sudo systemctl enable sshd
+RUN sudo systemctl enable sshd docker netdata
 RUN sudo sed -i 's/.*PasswordAuthentication .*/PasswordAuthentication no/g' /etc/ssh/sshd_config
 
 # copy scripts

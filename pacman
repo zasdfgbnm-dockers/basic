@@ -71,9 +71,6 @@ python-scipy
 python-h5py
 python-sphinx
 python-tqdm
-python-pytorch-cuda
-python-tensorflow-opt-cuda
-tensorboard
 
 # linter & beautifier
 autopep8

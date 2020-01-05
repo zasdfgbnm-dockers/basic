@@ -7,10 +7,14 @@ COPY zshrc /etc/zsh/
 COPY locale.gen /etc/locale.gen
 
 # RUN /select-mirrors.sh
+RUN sed -i 's/NoExtract/#NoExtract/g' /etc/pacman.conf
+RUN sed -i 's/HoldPkg/#HoldPkg/g' /etc/pacman.conf
+
 RUN pacman -Sy --noconfirm archlinux-keyring
-RUN pacman -Syu --noconfirm
+RUN pacman -S --noconfirm pacman pacman-contrib
 RUN pacman -S --noconfirm man-db man-pages
-RUN pacman -S --noconfirm base
+RUN pacman -Qqn | pacman -S --noconfirm  -
+RUN pacman -S --noconfirm base base-devel linux
 RUN locale-gen
 RUN pacman -S --noconfirm $(grep '^\w.*' /pacman)
 

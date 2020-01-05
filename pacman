@@ -58,3 +58,5 @@ npm
 go
 go-tools
 ninja
+python
+python-pip

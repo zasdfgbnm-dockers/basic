@@ -20,20 +20,17 @@ RUN pacman -S --noconfirm $(grep '^\w.*' /pacman)
 
 # install packages
 USER user
-RUN  yaourt -Syua --noconfirm || true
+
+RUN yaourt -S --noconfirm mkinitcpio-docker-hooks
+RUN sudo sed -i 's/archlinux\/base/zasdfgbnmsystem\/basic/g' /etc/docker-btrfs.json
+RUN sudo perl -i -p -e 's/(?<=^HOOKS=\()(.*)(?=\))/$1 docker-btrfs/g' /etc/mkinitcpio.conf
+
+RUN yaourt -Syua --noconfirm || true
 RUN for i in $(grep '^\w.*' /yaourt); do yaourt -S --noconfirm $i || true; done
 
-USER root
-
 # setting up services
-RUN systemctl enable sshd
-
-# setting up sshd
-RUN sed -i 's/.*PasswordAuthentication .*/PasswordAuthentication no/g' /etc/ssh/sshd_config
-
-# setting up mkinitcpio
-RUN sed -i 's/archlinux\/base/zasdfgbnmsystem\/basic/g' /etc/docker-btrfs.json
-RUN perl -i -p -e 's/(?<=^HOOKS=\()(.*)(?=\))/$1 docker-btrfs/g' /etc/mkinitcpio.conf
+RUN sudo systemctl enable sshd
+RUN sudo sed -i 's/.*PasswordAuthentication .*/PasswordAuthentication no/g' /etc/ssh/sshd_config
 
 # copy gen_boot
 COPY gen_boot /usr/bin

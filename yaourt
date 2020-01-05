@@ -1,10 +1,6 @@
-mkinitcpio-docker-hooks
-oh-my-zsh-git
 byobu
 js-beautify
-nvidia-docker
-ruby-travis
+nvidia-container-toolkit
 jdk
 slurm-llnl
 jupyter_contrib_nbextensions
-

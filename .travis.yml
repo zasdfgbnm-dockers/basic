@@ -1,7 +1,0 @@
-sudo: required
-
-env:
-  global:
-    secure: "DRJu0oyce8cEWmqkUuNbaAEtNu8vnn9dnjWDqRsEfd9U2c1AYSdLYO4QSyfKpBagUCXwi5dXiJsS2IAbn6m9fvaFTTNQ/pHbr95d9bRzBFqzWPmakKk76EutFBS8EMQZxppVr1J0nwvXgCUH+iFTyunmmYDHvo06Gm3y2+lAhGdmFTkvYFJdb3l4ZkwOU2xShKFVcjpbQbwEzwdgUo8u6XWVQel092MiQ9YPCR1s5BEbHvuljurF8cpuBZErkqz5JMrwcKxMlFpZdq0eAQaV8jOn+GO99gS2qJvqq4vVLkuuDxxRM3oqn2U6FUQQ1KhjcEwmcqjrEsMHYtolu9q1sCGNXp+/euMGjIkdcRQej12vlBk5Ftz3i2L12MQKzWc/LXfa2/malTlck9WMP9D3MrLhIUDAZ+6pGq94wKdIx/d9UaoIT6y6MVWeXZdwIDDPVqZzVxDUmRHOhiFELH3M5GN4+h7ik5w1izEwmHnMZJLM+EfllLqE92z36i4eyaRMHmgUvO6WMj4u56CjCinlLao3vgguUAdCZITe/tbHYMXtS345gZUSlYUgmzjRGD/y3W6v+TeHXkQGabYnNRDgK/hoUdViBSUYYCqjbhs+6SVQgSnuSWwj/2ODjgziVJ3xwVqL3WCYsp/bHa4eyXGDByPj+mNKObQCLpDhNvaSOFo="
-
-script: 'curl --output /dev/null --silent -H "Content-Type: application/json" --data "{\"build\": true}" -X POST "$TRIGGER_URL"'

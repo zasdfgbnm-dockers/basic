@@ -1,7 +1,7 @@
 # shell
 zsh
 fish
-zsh-syntax-highlighting
+xonsh
 reptyr
 tmux
 screen
@@ -9,7 +9,6 @@ mosh
 openssh
 xonsh
 bash-completion
-
 
 # useful command line tools
 jq
@@ -22,7 +21,6 @@ cloc
 vim
 git
 git-lfs
-ctags
 unzip
 
 # network related
@@ -33,13 +31,19 @@ darkhttpd
 wireguard-dkms
 wireguard-tools
 ethtool
+tcpdump
+nmap
+bind-tools
+traceroute
+sshfs
+openbsd-netcat
 
 # system
-nvidia-dkms
 linux-headers
 lsof
 iotop
 htop
+netdata
 
 # compression
 zip
@@ -48,35 +52,11 @@ unrar
 
 # programming
 clang
-jupyter
-jupyter-notebook
-jupyter-nbconvert
-mathjax
 nodejs
 npm
 go
 go-tools
-scala
 ninja
-
-# python libs
-scrapy
-python-pandas
-python-progressbar
-python-sympy
-python-pip
-python-matplotlib
-python-numpy
-python-scipy
-python-h5py
-python-sphinx
-python-tqdm
-
-# linter & beautifier
-autopep8
-uncrustify
-python-pylint
-flake8
 
 # run docker inside docker
 docker

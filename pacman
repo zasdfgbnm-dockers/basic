@@ -24,6 +24,11 @@ git-lfs
 unzip
 
 # network related
+dhcpcd
+networkmanager
+networkmanager-openconnect
+networkmanager-pptp
+networkmanager-strongswan
 aria2
 wget
 httpie

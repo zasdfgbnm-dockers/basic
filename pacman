@@ -25,16 +25,17 @@ unzip
 
 # network related
 dhcpcd
+wireguard-arch
+wireguard-tools
 networkmanager
 networkmanager-openconnect
 networkmanager-pptp
 networkmanager-strongswan
+networkmanager-wireguard-git
 aria2
 wget
 httpie
 darkhttpd
-wireguard-dkms
-wireguard-tools
 ethtool
 tcpdump
 nmap

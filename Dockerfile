@@ -13,7 +13,7 @@ RUN sed -i 's/HoldPkg/#HoldPkg/g' /etc/pacman.conf
 RUN rm -rf /etc/pacman.d/gnupg
 RUN pacman-key --init
 RUN pacman-key --populate archlinux
-RUN pacman -Sy --noconfirm archlinux-keyring
+RUN pacman -Sy --noconfirm archlinux-keyring archlinuxcn-keyring
 
 # reinstall packages to restore all its files
 RUN pacman -S --noconfirm pacman pacman-contrib

@@ -46,6 +46,9 @@ htop
 netdata
 docker
 efibootmgr
+grub
+grub-btrfs
+refind-efi
 
 # compression
 zip

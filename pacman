@@ -31,7 +31,6 @@ networkmanager
 networkmanager-openconnect
 networkmanager-pptp
 networkmanager-strongswan
-networkmanager-wireguard-git
 aria2
 wget
 httpie

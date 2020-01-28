@@ -41,6 +41,7 @@ nmap
 bind-tools
 traceroute
 sshfs
+nfs-utils
 openbsd-netcat
 
 # system

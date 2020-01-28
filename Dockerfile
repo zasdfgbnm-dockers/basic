@@ -4,6 +4,7 @@ FROM zasdfgbnm/archlinux-yaourt
 USER root
 COPY pacman /
 COPY locale.gen /etc/locale.gen
+COPY kernel.conf /etc/sysctl.d/kernel.conf
 
 # setup pacman to get a full image
 RUN sed -i 's/NoExtract/#NoExtract/g' /etc/pacman.conf

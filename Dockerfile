@@ -35,6 +35,7 @@ RUN sudo perl -i -p -e 's/(?<=^HOOKS=\()(.*)(?=\))/$1 docker-btrfs/g' /etc/mkini
 # setting up services
 RUN sudo systemctl enable sshd docker netdata NetworkManager
 RUN sudo sed -i 's/.*PasswordAuthentication .*/PasswordAuthentication no/g' /etc/ssh/sshd_config
+RUN sudo sed -i 's/#NAutoVTs/NAutoVTs/g' /etc/systemd/logind.conf
 
 # copy scripts
 COPY gen_boot /usr/bin/

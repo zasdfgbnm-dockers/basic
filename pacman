@@ -69,3 +69,4 @@ go-tools
 ninja
 python
 python-pip
+cmake

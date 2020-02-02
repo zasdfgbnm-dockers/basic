@@ -55,6 +55,7 @@ efibootmgr
 grub
 grub-btrfs
 refind-efi
+memtest86+
 
 # compression
 zip

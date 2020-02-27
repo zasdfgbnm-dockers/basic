@@ -33,7 +33,7 @@ RUN sudo sed -i 's/archlinux\/base/zasdfgbnmsystem\/basic/g' /etc/docker-btrfs.j
 RUN sudo perl -i -p -e 's/(?<=^HOOKS=\()(.*)(?=\))/$1 docker-btrfs/g' /etc/mkinitcpio.conf
 
 # setting up services
-RUN sudo systemctl enable sshd docker netdata NetworkManager NetworkManager-dispatcher
+RUN sudo systemctl enable sshd docker netdata NetworkManager NetworkManager-dispatcher iptables
 RUN sudo sed -i 's/.*PasswordAuthentication .*/PasswordAuthentication no/g' /etc/ssh/sshd_config
 RUN sudo sed -i 's/#NAutoVTs/NAutoVTs/g' /etc/systemd/logind.conf
 

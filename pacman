@@ -72,3 +72,4 @@ ninja
 python
 python-pip
 cmake
+openmp

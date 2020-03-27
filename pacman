@@ -23,6 +23,7 @@ git
 git-lfs
 unzip
 ripgrep
+fzf
 
 # network related
 dhcpcd

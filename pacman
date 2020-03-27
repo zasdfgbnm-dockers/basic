@@ -22,6 +22,7 @@ vim
 git
 git-lfs
 unzip
+ripgrep
 
 # network related
 dhcpcd

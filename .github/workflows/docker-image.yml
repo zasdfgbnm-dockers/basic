@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
     - name: Build the Docker image
       run: docker build --pull --no-cache . --tag zasdfgbnmsystem/basic
     - name: Publish the Docker image

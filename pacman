@@ -22,9 +22,17 @@ vim
 git
 git-lfs
 unzip
+
+# modern fancy commands
 ripgrep
 fzf
 fd
+bat
+exa
+hexyl
+hyperfine
+lsd
+broot
 
 # network related
 dhcpcd

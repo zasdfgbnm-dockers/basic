@@ -74,6 +74,7 @@ depends=(
 	refind-efi
 	memtest86+
 	fkill
+	mkinitcpio-docker-hooks
 
 	# compression
 	zip

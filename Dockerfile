@@ -23,10 +23,10 @@ RUN pacman -Qqn | pacman -S --noconfirm  -
 RUN pacman -S --noconfirm base base-devel linux linux-firmware
 
 # install packages
-RUN sudo -u user yaourt -P -i --noconfirm /zasdfgbnmsystem-basic
+USER user
+RUN yaourt -P -i --noconfirm /zasdfgbnmsystem-basic
 
 # make initramfs bootable
-RUN yaourt -S --noconfirm mkinitcpio-docker-hooks
 RUN sudo sed -i 's/archlinux\/base/zasdfgbnmsystem\/basic/g' /etc/docker-btrfs.json
 RUN sudo perl -i -p -e 's/(?<=^HOOKS=\()(.*)(?=\))/$1 docker-btrfs/g' /etc/mkinitcpio.conf
 

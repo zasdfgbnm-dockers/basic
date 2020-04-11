@@ -25,7 +25,7 @@ RUN pacman -S --noconfirm base base-devel linux linux-firmware
 # install packages
 RUN pacman -S --noconfirm $(grep '^\w.*' /pacman)
 USER user
-RUN yaourt -S --noconfirm navi fkill python-gdbgui
+RUN yaourt -S --noconfirm navi fkill nerd-fonts-complete
 
 # make initramfs bootable
 RUN yaourt -S --noconfirm mkinitcpio-docker-hooks

@@ -2,9 +2,9 @@ FROM zasdfgbnm/archlinux-yaourt
 
 # setup
 USER root
-COPY pacman /
 COPY locale.gen /etc/locale.gen
 COPY kernel.conf /etc/sysctl.d/kernel.conf
+COPY zasdfgbnmsystem-basic /
 
 # setup pacman to get a full image
 RUN sed -i 's/NoExtract/#NoExtract/g' /etc/pacman.conf
@@ -23,9 +23,7 @@ RUN pacman -Qqn | pacman -S --noconfirm  -
 RUN pacman -S --noconfirm base base-devel linux linux-firmware
 
 # install packages
-RUN pacman -S --noconfirm $(grep '^\w.*' /pacman)
-USER user
-RUN yaourt -S --noconfirm fkill nerd-fonts-complete
+RUN yaourt -P -i --noconfirm /zasdfgbnmsystem-basic
 
 # make initramfs bootable
 RUN yaourt -S --noconfirm mkinitcpio-docker-hooks

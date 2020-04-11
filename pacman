@@ -53,6 +53,7 @@ traceroute
 sshfs
 nfs-utils
 openbsd-netcat
+httpie
 
 # system
 linux-headers

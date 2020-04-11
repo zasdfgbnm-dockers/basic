@@ -26,6 +26,7 @@ RUN pacman -S --noconfirm base base-devel linux linux-firmware
 RUN pacman -S --noconfirm $(grep '^\w.*' /pacman)
 RUN pip install xonsh-docker-tabcomplete xonsh-vox-tabcomplete
 USER user
+RUN yaourt -S --noconfirm navi fkill python-gdbgui
 
 # make initramfs bootable
 RUN yaourt -S --noconfirm mkinitcpio-docker-hooks

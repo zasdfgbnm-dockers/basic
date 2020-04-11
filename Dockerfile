@@ -23,7 +23,7 @@ RUN pacman -Qqn | pacman -S --noconfirm  -
 RUN pacman -S --noconfirm base base-devel linux linux-firmware
 
 # install packages
-RUN yaourt -P -i --noconfirm /zasdfgbnmsystem-basic
+RUN sudo -u user yaourt -P -i --noconfirm /zasdfgbnmsystem-basic
 
 # make initramfs bootable
 RUN yaourt -S --noconfirm mkinitcpio-docker-hooks

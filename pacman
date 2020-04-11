@@ -24,10 +24,10 @@ git-lfs
 unzip
 ripgrep
 fzf
+fd
 
 # network related
 dhcpcd
-wireguard-arch
 wireguard-tools
 networkmanager
 networkmanager-openconnect

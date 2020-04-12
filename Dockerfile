@@ -5,7 +5,7 @@ USER root
 COPY locale.gen /etc/locale.gen
 COPY kernel.conf /etc/sysctl.d/kernel.conf
 COPY inotify.conf /etc/sysctl.d/inotify.conf
-COPY pacman.conf /zasdfgbnmsystem-basic/pacman.conf
+COPY pacman.conf /pacman.conf
 
 # setup pacman to get a full image
 RUN sed -i 's/NoExtract/#NoExtract/g' /etc/pacman.conf

@@ -7,7 +7,7 @@ COPY pacman.conf /opt/zasdfgbnmsystem/pacman.conf
 # setup pacman to get a full image
 RUN sed -i 's/NoExtract/#NoExtract/g' /etc/pacman.conf
 RUN sed -i 's/HoldPkg/#HoldPkg/g' /etc/pacman.conf
-RUN cat /pacman.conf >> /etc/pacman.conf
+RUN cat /opt/zasdfgbnmsystem/pacman.conf >> /etc/pacman.conf
 
 # setup keyring
 RUN rm -rf /etc/pacman.d/gnupg

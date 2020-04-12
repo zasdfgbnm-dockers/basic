@@ -76,6 +76,8 @@ depends=(
 	memtest86+
 	fkill
 	mkinitcpio-docker-hooks
+	intel-ucode
+	amd-ucode
 
 	# compression
 	zip

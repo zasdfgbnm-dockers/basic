@@ -27,6 +27,7 @@ depends=(
 	git
 	git-lfs
 	unzip
+	progress-git
 
 	# modern fancy commands
 	nerd-fonts-complete
@@ -81,7 +82,7 @@ depends=(
 	pigz
 	unrar
 
-	# programming
+	# development
 	clang
 	nodejs
 	npm
@@ -92,5 +93,6 @@ depends=(
 	python-pip
 	cmake
 	openmp
+	rr
 )
 

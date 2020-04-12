@@ -5,11 +5,12 @@ USER root
 COPY locale.gen /etc/locale.gen
 COPY kernel.conf /etc/sysctl.d/kernel.conf
 COPY inotify.conf /etc/sysctl.d/inotify.conf
-COPY PKGBUILD /zasdfgbnmsystem-basic/PKGBUILD
+COPY pacman.conf /zasdfgbnmsystem-basic/pacman.conf
 
 # setup pacman to get a full image
 RUN sed -i 's/NoExtract/#NoExtract/g' /etc/pacman.conf
 RUN sed -i 's/HoldPkg/#HoldPkg/g' /etc/pacman.conf
+RUN cat /pacman.conf >> /etc/pacman.conf
 
 # setup keyring
 RUN rm -rf /etc/pacman.d/gnupg
@@ -25,7 +26,7 @@ RUN pacman -S --noconfirm base base-devel linux linux-firmware
 
 # install packages
 USER user
-RUN yaourt -P -i --noconfirm /zasdfgbnmsystem-basic
+RUN yaourt -S --noconfirm zasdfgbnmsystem-basic
 
 # make initramfs bootable
 RUN sudo sed -i 's/archlinux\/base/zasdfgbnmsystem\/basic/g' /etc/docker-btrfs.json

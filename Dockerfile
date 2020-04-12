@@ -4,7 +4,7 @@ FROM zasdfgbnm/archlinux-yaourt
 USER root
 COPY locale.gen /etc/locale.gen
 COPY kernel.conf /etc/sysctl.d/kernel.conf
-ADD PKGBUILD /zasdfgbnmsystem-basic/PKGBUILD
+COPY PKGBUILD /zasdfgbnmsystem-basic/PKGBUILD
 
 # setup pacman to get a full image
 RUN sed -i 's/NoExtract/#NoExtract/g' /etc/pacman.conf

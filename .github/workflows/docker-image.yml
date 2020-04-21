@@ -17,8 +17,8 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build the Docker image
       run: |
-        sh -c 'yes | docker system prune'
-        sh -c "docker image ls|grep '<none>'|awk '{ print $3 }'|xargs docker image rm"
+        sh -c 'yes | docker system prune || true'
+        sh -c "docker image ls|grep '<none>'|awk '{ print $3 }'|xargs docker image rm || true"
         docker build --pull --no-cache . --tag zasdfgbnmsystem/basic
     - name: Publish the Docker image
       run: |

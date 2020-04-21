@@ -16,7 +16,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build --pull --no-cache . --tag zasdfgbnmsystem/basic
+      run: |
+        yes | docker system prune
+        docker image ls|grep '<none>'|awk '{ print $3 }'|xargs docker image rm
+        docker build --pull --no-cache . --tag zasdfgbnmsystem/basic
     - name: Publish the Docker image
       run: |
         docker login -u zasdfgbnm -p ${{secrets.zasdfgbnm_bot_dockerhub_password}}

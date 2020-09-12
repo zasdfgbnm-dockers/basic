@@ -16,9 +16,9 @@ RUN pacman-key --populate archlinux
 RUN pacman -Sy --noconfirm archlinux-keyring archlinuxcn-keyring
 
 # reinstall packages to restore all its files
-RUN pacman -Sy --noconfirm pacman pacman-contrib
-RUN pacman -Sy --noconfirm man-db man-pages
-RUN pacman -Qqn | pacman -S --noconfirm  -
+RUN yes | pacman -Sy --noconfirm pacman pacman-contrib
+RUN yes | pacman -Sy --noconfirm man-db man-pages
+RUN yes | pacman -Qqn | pacman -S --noconfirm  -
 RUN yes | pacman -Sy --noconfirm base base-devel linux linux-firmware
 
 # install packages

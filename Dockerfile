@@ -19,7 +19,7 @@ RUN pacman -Sy --noconfirm archlinux-keyring archlinuxcn-keyring
 RUN pacman -Sy --noconfirm pacman pacman-contrib
 RUN pacman -Sy --noconfirm man-db man-pages
 RUN pacman -Qqn | pacman -S --noconfirm  -
-RUN pacman -Sy --noconfirm base base-devel linux linux-firmware
+RUN yes | pacman -Sy --noconfirm base base-devel linux linux-firmware
 
 # install packages
 USER user

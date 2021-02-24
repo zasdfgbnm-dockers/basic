@@ -19,8 +19,17 @@ RUN pacman -Sy --noconfirm archlinux-keyring archlinuxcn-keyring
 RUN pacman -Sy --noconfirm pacman pacman-contrib
 RUN pacman -Sy --noconfirm man-db man-pages
 RUN pacman -Syu --noconfirm
-RUN pacman -Qqn | pacman -S --noconfirm  -
 RUN pacman -Sy --noconfirm base base-devel linux linux-firmware
+
+# https://github.com/actions/virtual-environments/issues/2658
+# https://github.com/lxqt/lxqt-panel/pull/1562
+# Work-around the issue with glibc 2.33 on old Docker engines
+# Extract files directly as pacman is also affected by the issue
+ENV patched_glibc=glibc-linux4-2.33-4-x86_64.pkg.tar.zst
+RUN curl -LO https://repo.archlinuxcn.org/x86_64/$patched_glibc
+RUN bsdtar -C / -xvf $patched_glibc
+
+RUN pacman -Qqn | pacman -S --noconfirm  -
 
 # disable cgroup usage of nvidia docker as a workaround for https://github.com/NVIDIA/libnvidia-container/issues/111#issuecomment-782332657
 RUN sed -i 's/#no-cgroups = false/no-cgroups = true/g' /etc/nvidia-container-runtime/config.toml

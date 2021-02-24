@@ -31,9 +31,6 @@ RUN bsdtar -C / -xvf $patched_glibc
 
 RUN pacman -Qqn | pacman -S --noconfirm  -
 
-# disable cgroup usage of nvidia docker as a workaround for https://github.com/NVIDIA/libnvidia-container/issues/111#issuecomment-782332657
-RUN sed -i 's/#no-cgroups = false/no-cgroups = true/g' /etc/nvidia-container-runtime/config.toml
-
 # install packages
 USER user
 RUN yaourt -Sy --noconfirm zasdfgbnmsystem-basic

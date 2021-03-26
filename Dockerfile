@@ -23,14 +23,6 @@ RUN pacman -Sy --noconfirm base base-devel linux linux-firmware
 
 RUN pacman -Qqn | pacman -S --noconfirm  -
 
-# https://github.com/actions/virtual-environments/issues/2658
-# https://github.com/lxqt/lxqt-panel/pull/1562
-# Work-around the issue with glibc 2.33 on old Docker engines
-# Extract files directly as pacman is also affected by the issue
-ENV patched_glibc=glibc-linux4-2.33-4-x86_64.pkg.tar.zst
-RUN curl -LO https://repo.archlinuxcn.org/x86_64/$patched_glibc
-RUN bsdtar -C / -xvf $patched_glibc
-
 # install packages
 USER user
 RUN yaourt -Sy --noconfirm zasdfgbnmsystem-basic

@@ -3,7 +3,7 @@ FROM zasdfgbnm/archlinux-yaourt
 # setup
 USER root
 COPY pacman.conf /opt/zasdfgbnmsystem/basic/pacman.conf
-COPY basic /usr/local/packages/basic
+COPY basic /usr/local/share/packages/basic
 
 # setup pacman to get a full image
 RUN sed -i 's/NoExtract/#NoExtract/g' /etc/pacman.conf
@@ -26,5 +26,5 @@ RUN pacman -Qqn | pacman -S --noconfirm  -
 
 # install packages
 USER user
-RUN yaourt -Pi --noconfirm /usr/local/packages/basic
+RUN yaourt -Pi --noconfirm /usr/local/share/packages/basic
 

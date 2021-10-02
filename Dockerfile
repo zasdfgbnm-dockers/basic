@@ -1,4 +1,4 @@
-FROM zasdfgbnm/archlinux-yaourt
+FROM zasdfgbnm/archlinux-yay
 
 # setup
 USER root
@@ -27,6 +27,6 @@ COPY basic /tmp/basic
 USER user
 RUN sudo chown -R user:user /tmp/basic
 WORKDIR /tmp/basic
-RUN makepkg -p ./PKGBUILD --printsrcinfo | awk '{$1=$1};1' | grep -oP '(?<=^depends = ).*' | xargs yaourt -S --noconfirm
+RUN makepkg -p ./PKGBUILD --printsrcinfo | awk '{$1=$1};1' | grep -oP '(?<=^depends = ).*' | xargs yay -S --noconfirm
 RUN makepkg -i --noconfirm
 

@@ -2,13 +2,10 @@ FROM zasdfgbnm/archlinux-yaourt
 
 # setup
 USER root
-COPY pacman.conf /opt/zasdfgbnmsystem/basic/pacman.conf
-COPY basic /usr/local/share/packages/basic
 
 # setup pacman to get a full image
 RUN sed -i 's/NoExtract/#NoExtract/g' /etc/pacman.conf
 RUN sed -i 's/HoldPkg/#HoldPkg/g' /etc/pacman.conf
-RUN cat /opt/zasdfgbnmsystem/basic/pacman.conf >> /etc/pacman.conf
 
 # setup keyring
 RUN rm -rf /etc/pacman.d/gnupg
@@ -25,6 +22,7 @@ RUN pacman -Sy --noconfirm base base-devel linux linux-firmware
 RUN pacman -Qqn | pacman -S --noconfirm  -
 
 # install packages
+COPY basic /usr/local/share/packages/basic
 USER user
-RUN yaourt -Pi --noconfirm /usr/local/share/packages/basic
+RUN cd /usr/local/share/packages/basic && yaourt -Pi --noconfirm .
 

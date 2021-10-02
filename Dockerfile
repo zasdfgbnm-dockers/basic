@@ -23,6 +23,10 @@ RUN pacman -Qqn | pacman -S --noconfirm  -
 
 # install packages
 COPY basic /usr/local/share/packages/basic
+COPY basic /tmp/basic
 USER user
-RUN cd /usr/local/share/packages/basic && yaourt -Pi --noconfirm .
+RUN sudo chown -R user:user /tmp/basic
+WORKDIR /tmp/basic
+RUN makepkg -p ./PKGBUILD --printsrcinfo | awk '{$1=$1};1' | grep -oP '(?<=^depends = ).*' | xargs yaourt -S --noconfirm
+RUN makepkg -i --noconfirm
 

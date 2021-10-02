@@ -20,11 +20,9 @@ RUN pacman -Sy --noconfirm archlinux-keyring archlinuxcn-keyring
 RUN pacman -Sy --noconfirm pacman pacman-contrib
 RUN pacman -Sy --noconfirm man-db man-pages
 RUN pacman -Syu --noconfirm
-RUN pacman -Qqn | pacman -S --noconfirm  -
 RUN pacman -Sy --noconfirm base base-devel linux linux-firmware
 
-# disable cgroup usage of nvidia docker as a workaround for https://github.com/NVIDIA/libnvidia-container/issues/111#issuecomment-782332657
-RUN sed -i s/#no-cgroups = false/no-cgroups = true/g' /etc/nvidia-container-runtime/config.toml
+RUN pacman -Qqn | pacman -S --noconfirm  -
 
 # install packages
 USER user

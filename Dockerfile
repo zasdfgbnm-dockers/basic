@@ -30,3 +30,5 @@ WORKDIR /tmp/basic
 RUN makepkg -p ./PKGBUILD --printsrcinfo | awk '{$1=$1};1' | grep -oP '(?<=^depends = ).*' | xargs yay -S --noconfirm
 RUN makepkg -i --noconfirm
 
+RUN sudo pip install xonsh-tcg
+

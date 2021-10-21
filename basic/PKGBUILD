@@ -32,6 +32,7 @@ depends=(
 	strace
 	tldr
 	git-delta
+	arcanist-git
 
 	# modern fancy commands
 	nerd-fonts-complete

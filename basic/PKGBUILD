@@ -110,6 +110,7 @@ depends=(
 	rr
 	fmt
 	boost
+	google-glog
 )
 
 source=(basic.conf dockersh gen_boot locale.gen)

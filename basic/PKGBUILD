@@ -97,6 +97,7 @@ depends=(
 	bazel
 	bazel-buildtools
 	clang
+	libc++
 	nodejs
 	npm
 	go

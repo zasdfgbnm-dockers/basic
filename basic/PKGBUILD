@@ -46,6 +46,7 @@ depends=(
 	lsd
 	broot
 	duf
+	ncdu
 
 	# network related
 	dhcpcd

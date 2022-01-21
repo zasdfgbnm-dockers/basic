@@ -115,6 +115,7 @@ depends=(
 	google-glog
 	tcl
 	tk
+	radare2
 )
 
 source=(basic.conf dockersh gen_boot locale.gen)

@@ -116,6 +116,7 @@ depends=(
 	tcl
 	tk
 	radare2
+	github-cli
 )
 
 source=(basic.conf dockersh gen_boot locale.gen)

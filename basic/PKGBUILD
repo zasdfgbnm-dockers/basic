@@ -33,6 +33,7 @@ depends=(
 	tldr
 	git-delta
 	arcanist-git
+	p7zip
 
 	# modern fancy commands
 	nerd-fonts-complete

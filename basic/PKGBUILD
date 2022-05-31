@@ -108,6 +108,7 @@ depends=(
 	python
 	python-pip
 	python-pyaml
+	jupyter-notebook
 	cmake
 	openmp
 	rr

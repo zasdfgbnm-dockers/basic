@@ -119,6 +119,7 @@ depends=(
 	tk
 	radare2
 	github-cli
+	cling
 )
 
 source=(basic.conf dockersh gen_boot locale.gen)

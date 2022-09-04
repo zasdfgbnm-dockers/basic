@@ -50,6 +50,7 @@ depends=(
 	ncdu
 
 	# network related
+	dnsmasq
 	dhcpcd
 	wireguard-tools
 	networkmanager

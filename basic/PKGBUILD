@@ -72,6 +72,8 @@ depends=(
 	httpie
 	gping
 	iperf3
+	radvd
+	zerotier-one
 
 	# system
 	tcg

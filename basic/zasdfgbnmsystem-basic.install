@@ -10,7 +10,7 @@ post_install() {
     perl -i -p -e 's/(?<=^HOOKS=\()(.*)(?=\))/$1 docker-btrfs/g' /etc/mkinitcpio.conf
 
     # setting up services
-    systemctl enable sshd docker netdata NetworkManager NetworkManager-dispatcher iptables
+    systemctl enable sshd docker netdata iptables
     sed -i 's/.*PasswordAuthentication .*/PasswordAuthentication no/g' /etc/ssh/sshd_config
     sed -i 's/#NAutoVTs/NAutoVTs/g' /etc/systemd/logind.conf
 }

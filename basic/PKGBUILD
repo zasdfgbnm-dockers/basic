@@ -107,6 +107,7 @@ depends=(
 	python
 	python-pip
 	python-pyaml
+	python-jinja
 	jupyter-notebook
 	cmake
 	openmp

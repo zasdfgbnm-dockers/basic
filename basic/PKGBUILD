@@ -53,10 +53,6 @@ depends=(
 	dnsmasq
 	dhcpcd
 	wireguard-tools
-	networkmanager
-	networkmanager-openconnect
-	networkmanager-pptp
-	networkmanager-strongswan
 	aria2
 	wget
 	httpie

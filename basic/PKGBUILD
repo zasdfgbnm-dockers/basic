@@ -34,6 +34,7 @@ depends=(
 	git-delta
 	arcanist-git
 	p7zip
+	expect
 
 	# modern fancy commands
 	nerd-fonts-complete

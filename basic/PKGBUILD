@@ -37,6 +37,7 @@ depends=(
 	expect
 
 	# modern fancy commands
+	starship
 	nerd-fonts-complete
 	ripgrep
 	fzf
@@ -109,6 +110,7 @@ depends=(
 	python-pip
 	python-pyaml
 	python-jinja
+	python-prompt_toolkit
 	jupyter-notebook
 	cmake
 	openmp

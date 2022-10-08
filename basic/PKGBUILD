@@ -125,11 +125,12 @@ depends=(
 	cling
 )
 
-source=(basic.conf dockersh gen_boot locale.gen)
+source=(basic.conf dockersh gen_boot locale.gen bbr.conf)
 md5sums=('b3912821462b31bc2faa3ff2c10d796b'
          'a090af4e94b08b3545cb35fcd3b4f395'
          '63eea87d913d98738c3a2730e7a0319e'
-         '32a4472fe56ceb6939bc3af6fc9270eb')
+         '32a4472fe56ceb6939bc3af6fc9270eb'
+		 '224aa6e1ef68573d7e3322efb07b0d1b')
 
 package() {
 	cd ${pkgdir}
@@ -138,6 +139,7 @@ package() {
 	mkdir -p "${pkgdir}/opt/zasdfgbnmsystem/basic/etc/"
 
 	install -m 644 "${srcdir}/basic.conf" "${pkgdir}/etc/sysctl.d/"
+	install -m 644 "${srcdir}/bbr.conf" "${pkgdir}/etc/sysctl.d/"
 	install -m 755 "${srcdir}/dockersh" "${pkgdir}/usr/bin/"
 	install -m 755 "${srcdir}/gen_boot" "${pkgdir}/usr/bin/"
 	install -m 644 "${srcdir}/locale.gen" "${pkgdir}/opt/zasdfgbnmsystem/basic/etc/"

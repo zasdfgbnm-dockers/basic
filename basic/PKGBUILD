@@ -123,6 +123,7 @@ depends=(
 	radare2
 	github-cli
 	cling
+	hugo
 )
 
 source=(basic.conf dockersh gen_boot locale.gen bbr.conf)

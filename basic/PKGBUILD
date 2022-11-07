@@ -89,6 +89,7 @@ depends=(
 	mkinitcpio-docker-hooks
 	intel-ucode
 	amd-ucode
+	lshw
 
 	# compression
 	zip

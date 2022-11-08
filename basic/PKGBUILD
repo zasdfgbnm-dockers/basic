@@ -90,6 +90,7 @@ depends=(
 	intel-ucode
 	amd-ucode
 	lshw
+	s-tui
 
 	# compression
 	zip

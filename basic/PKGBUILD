@@ -35,6 +35,7 @@ depends=(
 	arcanist-git
 	p7zip
 	expect
+	difftastic
 
 	# modern fancy commands
 	starship

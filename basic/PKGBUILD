@@ -141,6 +141,7 @@ md5sums=('b3912821462b31bc2faa3ff2c10d796b'
 package() {
 	cd ${pkgdir}
 	mkdir -p "${pkgdir}/etc/sysctl.d/"
+	mkdir -p "${pkgdir}/etc/modprobe.d/"
 	mkdir -p "${pkgdir}/usr/bin/"
 	mkdir -p "${pkgdir}/opt/zasdfgbnmsystem/basic/etc/"
 

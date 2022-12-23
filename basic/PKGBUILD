@@ -129,12 +129,14 @@ depends=(
 	hugo
 )
 
-source=(basic.conf dockersh gen_boot locale.gen bbr.conf)
+source=(basic.conf dockersh gen_boot locale.gen bbr.conf nvidia.conf gen_boot_docker)
 md5sums=('b3912821462b31bc2faa3ff2c10d796b'
          'a090af4e94b08b3545cb35fcd3b4f395'
          '63eea87d913d98738c3a2730e7a0319e'
          '32a4472fe56ceb6939bc3af6fc9270eb'
-		 '224aa6e1ef68573d7e3322efb07b0d1b')
+		 '224aa6e1ef68573d7e3322efb07b0d1b'
+		 'ce1f4714acaf5fe3435a28cec2318615'
+		 'c9d03090716711c5c11c3ce910b4c1c4')
 
 package() {
 	cd ${pkgdir}
@@ -144,7 +146,10 @@ package() {
 
 	install -m 644 "${srcdir}/basic.conf" "${pkgdir}/etc/sysctl.d/"
 	install -m 644 "${srcdir}/bbr.conf" "${pkgdir}/etc/sysctl.d/"
+	install -m 644 "${srcdir}/nvidia.conf" "${pkgdir}/etc/modprobe.d/"
+	install -m 644 "${srcdir}/locale.gen" "${pkgdir}/opt/zasdfgbnmsystem/basic/etc/"
+
 	install -m 755 "${srcdir}/dockersh" "${pkgdir}/usr/bin/"
 	install -m 755 "${srcdir}/gen_boot" "${pkgdir}/usr/bin/"
-	install -m 644 "${srcdir}/locale.gen" "${pkgdir}/opt/zasdfgbnmsystem/basic/etc/"
+	install -m 755 "${srcdir}/gen_boot_docker" "${pkgdir}/usr/bin/"
 }

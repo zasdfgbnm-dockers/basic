@@ -1,0 +1,12 @@
+#!/bin/xonsh
+
+import json
+
+with open("/etc/docker-btrfs.json") as f:
+    j = json.load(f)
+    docker_image = j["docker_image"]
+    prefix = "zasdfgbnmsystem/"
+    assert docker_image.startswith(prefix)
+    docker_image_name = docker_image[len(prefix):]
+    print(f"Generating boot file for {prefix}{docker_image_name}...")
+    sudo dockersh desktop sudo gen_boot

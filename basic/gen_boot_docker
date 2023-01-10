@@ -1,6 +1,8 @@
 #!/bin/xonsh
 
 import json
+import tempfile
+import os
 
 with open("/etc/docker-btrfs.json") as f:
     j = json.load(f)
@@ -8,5 +10,30 @@ with open("/etc/docker-btrfs.json") as f:
     prefix = "zasdfgbnmsystem/"
     assert docker_image.startswith(prefix)
     docker_image_name = docker_image[len(prefix):]
-    print(f"Generating boot file for {prefix}{docker_image_name}...")
-    sudo dockersh desktop sudo gen_boot
+
+with open("/proc/cmdline") as f:
+    cmdline = f.read().split()
+    toplayer = None
+    toplayer_path = None
+    toplayer_prefix = "toplayer="
+    toplayer_path_prefix = "toplayer_path="
+    for item in cmdline:
+        if item.startswith(toplayer_prefix):
+            toplayer = item[len(toplayer_prefix):]
+        elif item.startswith(toplayer_path_prefix):
+            toplayer_path = item[len(toplayer_path_prefix):]
+    assert toplayer is not None
+    assert toplayer_path is not None
+    print()
+
+with tempfile.TemporaryDirectory() as d:
+    print(f"Mounting top layer {toplayer} at {d}...\n")
+    sudo mount @(toplayer) @(d)
+    findmnt @(d)
+    path = os.path.join(d, toplayer_path)
+    print(f"\nGenerating boot file for {prefix}{docker_image_name} at {path}...")
+    cd @(path)
+    sudo dockersh @(docker_image_name) sudo gen_boot
+    ls -lah
+    cd
+    sudo umount @(d)

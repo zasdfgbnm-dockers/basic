@@ -136,7 +136,7 @@ md5sums=('b3912821462b31bc2faa3ff2c10d796b'
          '32a4472fe56ceb6939bc3af6fc9270eb'
 		 '224aa6e1ef68573d7e3322efb07b0d1b'
 		 'ce1f4714acaf5fe3435a28cec2318615'
-		 'c9d03090716711c5c11c3ce910b4c1c4')
+		 '82eacd6d4ff03124ab4306b11e402a36')
 
 package() {
 	cd ${pkgdir}

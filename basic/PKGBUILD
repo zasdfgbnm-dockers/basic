@@ -28,7 +28,7 @@ depends=(
 	git
 	git-lfs
 	unzip
-	progress-git
+	progress
 	strace
 	tldr
 	git-delta

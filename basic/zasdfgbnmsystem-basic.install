@@ -8,6 +8,7 @@ post_install() {
     # make initramfs bootable
     sed -i 's/archlinux\/base/zasdfgbnmsystem\/basic/g' /etc/docker-btrfs.json
     perl -i -p -e 's/(?<=^HOOKS=\()(.*)(?=\))/$1 docker-btrfs/g' /etc/mkinitcpio.conf
+    sed -i 's/#PRESET_uki/PRESET_uki/g' /etc/mkinitcpio.d/linux.preset
 
     # setting up services
     systemctl enable sshd docker netdata iptables

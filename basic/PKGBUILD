@@ -75,7 +75,7 @@ depends=(
 	zerotier-one
 
 	# system
-	tcg
+	# tcg
 	linux-headers
 	lsof
 	iotop

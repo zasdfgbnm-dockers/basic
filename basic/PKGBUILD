@@ -112,6 +112,7 @@ depends=(
 	python
 	python-pip
 	python-pyaml
+ 	python-pytest
 	python-jinja
 	python-prompt_toolkit
 	jupyter-notebook

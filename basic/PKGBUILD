@@ -111,6 +111,7 @@ depends=(
 	ninja
 	python
 	python-pip
+	python-pipx
 	python-pyaml
  	python-pytest
 	python-jinja

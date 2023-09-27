@@ -106,11 +106,15 @@ depends=(
 	bazel-buildtools
 	clang
 	libc++
+ 	gtest
+ 	benchmark
+ 	flatbuffers
 	nodejs
 	npm
 	go
 	go-tools
 	ninja
+ 	meson
 	python
 	python-pip
 	python-pipx
@@ -118,6 +122,8 @@ depends=(
  	python-pytest
 	python-jinja
 	python-prompt_toolkit
+ 	python-flatbuffers
+ 	python-meson
 	jupyter-notebook
 	cmake
 	openmp

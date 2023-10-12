@@ -105,6 +105,8 @@ depends=(
 	bazel
 	bazel-buildtools
 	clang
+	clang15
+	clang14
 	libc++
  	lld
  	gtest

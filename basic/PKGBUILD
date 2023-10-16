@@ -126,7 +126,7 @@ depends=(
 	python-jinja
 	python-prompt_toolkit
  	python-flatbuffers
- 	python-meson
+  	meson-python
 	jupyter-notebook
 	cmake
 	openmp

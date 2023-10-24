@@ -16,6 +16,7 @@ depends=(
 	xonsh
 	xontrib-vox-git
 	bash-completion
+ 	time
 
 	# useful command line tools
 	jq

@@ -95,6 +95,7 @@ depends=(
 	amd-ucode
 	lshw
 	s-tui
+ 	debootstrap
 
 	# compression
 	zip

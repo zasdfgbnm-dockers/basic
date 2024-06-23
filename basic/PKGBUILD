@@ -103,6 +103,7 @@ depends=(
 	unrar
 
 	# development
+ 	elan-lean
 	lcov
 	bazel
 	bazel-buildtools

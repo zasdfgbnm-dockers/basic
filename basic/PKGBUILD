@@ -110,6 +110,7 @@ depends=(
 	clang
 	# clang15
 	clang14
+	lldb
 	libc++
  	lld
  	gtest

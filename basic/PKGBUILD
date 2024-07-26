@@ -41,7 +41,6 @@ depends=(
 
 	# modern fancy commands
 	starship
-	nerd-fonts
 	ripgrep
 	fzf
 	fd

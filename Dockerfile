@@ -20,9 +20,6 @@ RUN pacman -Sy --noconfirm man-db man-pages
 RUN pacman -Syu --noconfirm
 RUN pacman -Sy --noconfirm base base-devel linux linux-firmware
 
-# Install package groups that can not be a dependency
-RUN pacman -Sy --noconfirm nerd-fonts
-
 RUN pacman -Qqn | pacman -S --noconfirm  -
 
 # install packages

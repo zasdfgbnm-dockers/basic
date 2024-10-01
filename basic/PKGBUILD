@@ -112,6 +112,7 @@ depends=(
 	lldb
 	libc++
  	lld
+ 	mold
  	gtest
  	benchmark
  	flatbuffers

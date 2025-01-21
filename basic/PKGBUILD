@@ -105,7 +105,7 @@ depends=(
  	elan-lean
 	lcov
 	bazel
-	bazel-buildtools
+	# bazel-buildtools
 	clang
 	# clang15
 	clang14

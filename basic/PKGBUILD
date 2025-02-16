@@ -108,7 +108,7 @@ depends=(
 	# bazel-buildtools
 	clang
 	# clang15
-	clang14
+	# clang14
 	lldb
 	libc++
  	lld
@@ -118,6 +118,7 @@ depends=(
  	flatbuffers
 	nodejs
 	npm
+ 	pnpm
 	go
 	go-tools
 	ninja

@@ -74,6 +74,7 @@ depends=(
 	iperf3
 	radvd
 	zerotier-one
+	nginx
 
 	# system
 	# tcg
@@ -131,6 +132,8 @@ depends=(
 	python-jinja
 	python-prompt_toolkit
  	python-flatbuffers
+ 	python-aiohttp
+ 	python-cachetools
   	meson-python
 	jupyter-notebook
 	cmake

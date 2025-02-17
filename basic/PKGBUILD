@@ -149,6 +149,7 @@ depends=(
 	github-cli
 	cling
 	hugo
+	redis
 )
 
 source=(basic.conf dockersh gen_boot locale.gen bbr.conf nvidia.conf gen_boot_docker)

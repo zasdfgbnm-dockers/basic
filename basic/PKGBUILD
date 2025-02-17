@@ -134,6 +134,7 @@ depends=(
  	python-flatbuffers
  	python-aiohttp
  	python-cachetools
+ 	python-fastapi
   	meson-python
 	jupyter-notebook
 	cmake

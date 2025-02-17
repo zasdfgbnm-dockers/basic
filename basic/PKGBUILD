@@ -136,6 +136,7 @@ depends=(
  	python-aiohttp
  	python-cachetools
  	python-fastapi
+ 	python-redis
   	meson-python
 	jupyter-notebook
 	cmake

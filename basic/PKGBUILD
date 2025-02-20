@@ -137,6 +137,7 @@ depends=(
  	python-cachetools
  	python-fastapi
  	python-redis
+ 	python-faker
   	meson-python
 	jupyter-notebook
 	cmake

@@ -138,6 +138,7 @@ depends=(
  	python-fastapi
  	python-redis
  	python-faker
+ 	python-docker
   	meson-python
 	jupyter-notebook
 	cmake

@@ -76,6 +76,7 @@ depends=(
 	radvd
 	zerotier-one
 	nginx
+	nginx-mod-fancyinde
 
 	# system
 	# tcg
